@@ -16,11 +16,16 @@ with DAG(
 ) as dag:
     
     t1 = BashOperator(
-        task_id= 'print_date',
+        task_id= 'task_1',
         bash_command= 'date')
 
     t2 = BashOperator(
-        task_id = 'hello_world',
+        task_id = 'task_2',
         bash_command = 'echo hello word')
     
-    t1 >> t2
+    t3 = BashOperator(
+        task_id = 'task_3',
+        bash_command = 'echo third task'
+    )
+
+    t1 >> t2 >> t3 

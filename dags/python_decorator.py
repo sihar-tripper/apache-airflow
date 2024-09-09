@@ -5,7 +5,7 @@ default_args={
     'owner': 'sihar',
     'start_date': datetime(2024, 8, 25),
     'retries': 3,
-    'retry_dlay': timedelta(minutes=3)
+    'retry_delay': timedelta(minutes=3)
 }
 
 @dag(dag_id= 'dag_with_decorators',
